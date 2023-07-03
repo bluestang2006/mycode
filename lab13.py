@@ -7,6 +7,6 @@ def main():
     day = input("What day is it today? ")
 
     print("Hello, ", name,"! Happy ", day, "!", sep='')
-
+    print("Hello,",name + "! Happy",day + "!")
 
 main()
