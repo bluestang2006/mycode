@@ -19,10 +19,18 @@ def main():
        "powers": "super strength",
        "archenemy": "adrenaline"}
                   }
-
-    char_name = input(f"Which character do you want to know about? (Starlord, Mystique, Hulk)\n").lower().title()
-    char_stat = input(f"What statistic do you want to know about? (real name, powers, archenemy)\n").lower()
-    
+    while True:
+        char_name = input(f"Which character do you want to know about? (Starlord, Mystique, Hulk)\n").lower().title()
+    try:
+        
+    except: 
+        print(f"Character unknown!")
+    while True:   
+       char_stat = input(f"What statistic do you want to know about? (real name, powers, archenemy)\n").lower()
+    try:
+        break
+    except:
+        print(f"Statistic unknown!")
     if(char_stat == "real name"):
         print(f"\n{char_name}'s {char_stat} is: {marvelchars.get(char_name, '').get(char_stat, '').title()}")
     else:
