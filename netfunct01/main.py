@@ -14,11 +14,10 @@ def commandpush(devicecmd): # devicecmd==dict
             # we'll learn to write code that sends cmds to device here
     return None
 
-def commandpush2(devicecmd): # devicecmd==dict
-
-    for ip in devicecmd.keys(): # looping through the dict
-        print(f'{crayons.red("Connecting to")} {ip}')
-        print(f'REBOOTING NOW!')
+def devicereboot(dict): # devicecmd==dict
+    
+    for ip in dict: # looping through the dict
+        print(f'{crayons.red("Connecting to")} {ip} >>> REBOOTING NOW!')
     return None
 
 # start our main script
@@ -36,7 +35,7 @@ def main():
 
     ## run
     commandpush(devicecmd) # call function to push commands to devices
-    commandpush2(devicecmd)
+    devicereboot(devicecmd.keys())
 
 # call our main function
 main()
